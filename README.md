@@ -6,3 +6,4 @@ Using flutter to develope mobile and web application.
 - flutter pub add <package_name> (install package)
 - flutter run -d edge --no-sound-null-safety
 - dependences => pubspec.yaml
+- flutter run -d edge --no-sound-null-safety --release <<用於模擬正式環境>>

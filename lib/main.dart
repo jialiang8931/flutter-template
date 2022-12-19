@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      // home: const CounterWidget(),
-      home: const MyHomePage2(title: 'QQ123'),
+      home: const CounterWidget(),
+      // home: const MyHomePage2(title: 'QQ123'),
     );
   }
 }
@@ -72,7 +72,7 @@ class _CounterWidgetState extends State<CounterWidget> {
 
   @override
   Widget build(BuildContext context) {
-    print("build, $_counter");
+    // debugPrint("build, $_counter");
 
     // return Text('QQQ');
     return Scaffold(
@@ -82,9 +82,9 @@ class _CounterWidgetState extends State<CounterWidget> {
           //点击后计数器自增
           onPressed: () => setState(
             () => {
-              print('before, $_counter'),
+              // debugPrint('before, $_counter'),
               _counter++,
-              print('after, $_counter'),
+              debugPrint('after, $_counter'),
             
             },
           ),
