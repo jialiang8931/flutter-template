@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+const textStyle = TextStyle(
+  fontFamily: 'Raleway',
+);
+
 class MyHomePage2 extends StatefulWidget {
   const MyHomePage2({super.key, required this.title});
   final String title;
@@ -45,7 +49,47 @@ class _MyHomePageState2 extends State<MyHomePage2> {
                   }),
                 );
               },
-            )
+            ),
+            Text(
+              "JJL QQ123" * 16,
+              textAlign: TextAlign.start,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              textScaleFactor: 1.9,
+              style: TextStyle(
+                  color: Color.fromARGB(255, 255, _counter, 0),
+                  fontSize: 18.0,
+                  fontFamily: "Courier",
+                  background: Paint()..color = Colors.yellow,
+                  decoration: TextDecoration.lineThrough,
+                  decorationStyle: TextDecorationStyle.wavy),
+            ),
+            const Text.rich(TextSpan(children: [
+              TextSpan(text: "Home: "),
+              TextSpan(
+                text: "https://flutterchina.club",
+                style: textStyle,
+              ),
+              TextSpan(
+                text: "Daan",
+                style: TextStyle(color: Colors.amber),
+              ),
+            ])),
+            Image.network(
+              "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4",
+              width: 200.0,
+              color: Colors.blue,
+              colorBlendMode: BlendMode.difference,
+              repeat: ImageRepeat.repeatY,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const <Widget>[
+                Icon(Icons.accessible, color: Colors.green),
+                Icon(Icons.error, color: Colors.green),
+                Icon(Icons.fingerprint, color: Colors.green),
+              ],
+            ),
           ],
         ),
       ),
