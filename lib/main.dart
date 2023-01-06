@@ -1,7 +1,13 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:http_proxy/http_proxy.dart';
+import 'package:dio/dio.dart';
 import 'pages/home/home.dart';
 
-void main() {
+Dio dio = Dio();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

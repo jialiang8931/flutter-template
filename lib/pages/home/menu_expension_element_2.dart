@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:first_project/utils/axios.dart' as axios;
+import 'check_tables/table_widget.dart';
 
 final checkTables = <String>[
   '水位/流量/氣象 監測系統',
@@ -29,7 +31,13 @@ class Expension2 extends StatelessWidget {
                   title: Text('${i + 1}: ${checkTables[i]}'),
                   onTap: () {
                     debugPrint('${i + 1}: ${checkTables[i]}');
-                    Navigator.pop(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                TableNumberWidget(tableNumber: i + 1)));
+
+                    // Navigator.pop(context);
                   },
                 );
               },

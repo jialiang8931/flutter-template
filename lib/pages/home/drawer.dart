@@ -9,12 +9,12 @@ class RoutineMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        children: [
-          const DrawerHeader(
+        children: const [
+          DrawerHeader(
             decoration: BoxDecoration(color: Colors.blue),
             child: Text('導覽列'),
           ),
-          const Expension1(),
+          Expension1(),
           Expension2(),
         ],
       ),
